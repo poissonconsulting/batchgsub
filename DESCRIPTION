@@ -1,11 +1,11 @@
 Package: batchgsub
-Title: Batch Gsub Files
+Title: Batch File Text Replacement
 Version: 0.0.0.9000
 Authors@R: c(
     person("Joe", "Thorley", , "joe@poissonconsulting.ca", "ctb", comment = c(ORCID = "0000-0002-7683-4592")),
     person("Sebastian", "Dalgarno", , "seb@poissonconsulting.ca", c("aut", "cre"), comment = c(ORCID = "0000-0002-3658-4517"))
     )
-Description: A Shiny app and Rstudio addin to batch gsub content of files.
+Description: A Shiny app and Rstudio addin to batch process text replacement in content of files.
 License: MIT + file LICENSE
 Imports:
     stats,
