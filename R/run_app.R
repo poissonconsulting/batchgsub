@@ -2,5 +2,6 @@
 #'
 #' @export
 run_app <- function() {
-  shiny::runGadget(app = shiny::shinyAppDir(system.file("app", package = "batchr")))
+  shiny::runGadget(app = shiny::shinyAppDir(system.file("app", package = "batchgsub")), 
+                   viewer = shiny::dialogViewer('Batch file text replacement', height = 400))
 }
