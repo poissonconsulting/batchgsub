@@ -4,11 +4,11 @@
 \name{batchgsub-package}
 \alias{batchgsub}
 \alias{batchgsub-package}
-\title{batchgsub: Batch Gsub Files}
+\title{batchgsub: Batch File Text Replacement}
 \description{
 \if{html}{\figure{logo.png}{options: align='right'}}
 
-A Shiny app and Rstudio addin to batch gsub content of files.
+A Shiny app and Rstudio addin to batch process text replacement in content of files.
 }
 \seealso{
 Useful links:

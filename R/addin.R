@@ -1,3 +1,3 @@
-batch_gsub_addin <- function(){
-  batchr::run_app()
+batchgsub_addin <- function(){
+  batchgsub::run_app()
 }

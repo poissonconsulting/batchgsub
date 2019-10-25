@@ -1,5 +1,5 @@
 Name: batch file text replacement
-Description: Perform batch file text replacement using batch_gsub.
-Binding: batch_gsub_addin
+Description: Perform batch file text replacement using batchr::batch_gsub.
+Binding: batchgsub_addin
 Interactive: true
 
