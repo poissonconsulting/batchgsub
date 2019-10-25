@@ -1,4 +1,4 @@
 library(testthat)
-library(pkgtemplate)
+library(batchgsub)
 
-test_check("pkgtemplate")
+test_check("batchgsub")

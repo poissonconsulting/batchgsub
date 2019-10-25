@@ -1,8 +1,8 @@
 ---
-title: "Using pkgtemplate"
+title: "Using batchgsub"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Using pkgtemplate}
+  %\VignetteIndexEntry{Using batchgsub}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
