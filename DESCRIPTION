@@ -10,7 +10,6 @@ License: MIT + file LICENSE
 Imports:
     stats,
     chk,
-    lifecycle,
     shiny,
     shinyFiles,
     miniUI,
