@@ -31,3 +31,4 @@ RoxygenNote: 6.1.1
 RdMacros: lifecycle
 Language: en-US
 VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)

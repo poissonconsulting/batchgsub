@@ -13,13 +13,13 @@ chk_function_template(x, x_name = NULL)
 }
 \value{
 \code{NULL}, invisibly. Called for the side effect of throwing an error
-  if the condition is not met.
+if the condition is not met.
 }
 \description{
 A chk function template.
 }
 \details{
-Checks if character using \code{\link{vld_function_template}(x)}.
+Checks if character using \code{[vld_function_template](x)}.
 }
 \examples{
 chk_function_template("1")

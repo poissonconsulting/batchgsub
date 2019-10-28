@@ -20,10 +20,9 @@ MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org
 <!-- ![CRAN downloads](https://cranlogs.r-pkg.org/badges/batchgsub) -->
 <!-- badges: end -->
 
-batchgsub provides a template for a new R package.
-
-It includes useful internal
-functions.
+batchgsub provides a Shiny app and Rstudio addin for batch replacement
+of text content in
+files.
 
 ## Installation
 
@@ -48,9 +47,9 @@ install.packages("batchgsub")
 
 ## Demonstration
 
-In order to create a new package the user should go to the batchgsub
-[GitHub repository](https://github.com/poissonconsulting/batchgsub) and
-choose ‘Use this template’.
+``` r
+batchgsub::run_app()
+```
 
 ## Information
 

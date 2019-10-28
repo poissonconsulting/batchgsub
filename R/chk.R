@@ -2,10 +2,10 @@
 #'
 #' A chk function template.
 #'
-#' Checks if character using \code{\link{vld_function_template}(x)}.
+#' Checks if character using `[vld_function_template](x)`.
 #'
 #' @inheritParams chk::chk_flag
-#' @return \code{NULL}, invisibly. Called for the side effect of throwing an error
+#' @return `NULL`, invisibly. Called for the side effect of throwing an error
 #'   if the condition is not met.
 #' @export
 #' @examples

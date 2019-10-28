@@ -4,11 +4,11 @@
 #'
 #' Validates character using
 #'
-#' \code{is.character(x)}.
+#' `is.character(x)`.
 #'
 #' @inheritParams chk::chk_flag
 #' @return A flag indicating whether the condition was met.
-#' @seealso \code{\link{chk_function_template}()}
+#' @seealso [chk_function_template()]
 #' @export
 #' @examples
 #' vld_function_template("1")

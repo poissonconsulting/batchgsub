@@ -25,5 +25,5 @@ vld_function_template("1")
 vld_function_template(1)
 }
 \seealso{
-\code{\link{chk_function_template}()}
+\code{\link[=chk_function_template]{chk_function_template()}}
 }
