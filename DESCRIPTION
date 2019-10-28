@@ -14,9 +14,7 @@ Imports:
     shiny,
     shinyFiles,
     miniUI,
-    batchr,
-    hmstimer,
-    cli
+    batchr
 Suggests: 
     covr,
     testthat,
@@ -24,9 +22,7 @@ Suggests:
     rmarkdown
 Remotes: 
     poissonconsulting/chk,
-    poissonconsulting/batchr,
-    poissonconsulting/hmstimer,
-    r-lib/cli
+    poissonconsulting/batchr
 URL: https://github.com/poissonconsulting/batchgsub
 BugReports: https://github.com/poissonconsulting/batchgsub/issues
 Encoding: UTF-8
