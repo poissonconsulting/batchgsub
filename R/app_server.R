@@ -34,9 +34,7 @@ app_server <- function(input, output, session) {
   observeEvent(input$done, {
     req(global$datapath)
     path <- global$datapath
-    if (length(batchr:::config_files(path, recursive = FALSE))) {
-     batchr::batch_cleanup(path)
-    }
+    batchr::batch_cleanup(path)
     remaining <- try(batchr::batch_config(batchr::gsub_file, pattern = input$pattern,
                          replacement = input$replacement, path = path,
                          regexp = input$regexp, recurse = input$recurse), silent = TRUE)
