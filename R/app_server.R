@@ -5,7 +5,7 @@ app_server <- function(input, output, session) {
     updateTextInput(session, "replacement", value = "")
     updateCheckboxInput(session, "recurse", value = FALSE)
     updateTextInput(session, "regexp", value = "[.](R|r)$")
-    global$datapath <- getwd()
+    global$datapath <- NULL
   }
   
   show_success <- function(x){
@@ -17,7 +17,7 @@ app_server <- function(input, output, session) {
   
   shinyFiles::shinyDirChoose(input, 'dir', roots = c(home = '~'))
   
-  global <- reactiveValues(datapath = getwd())
+  global <- reactiveValues(datapath = NULL)
   
   output$path <- renderText({
     global$datapath
@@ -32,6 +32,7 @@ app_server <- function(input, output, session) {
   })
   
   observeEvent(input$done, {
+    req(global$datapath)
     path <- global$datapath
     if (length(batchr:::config_files(path, recursive = FALSE))) {
      batchr::batch_cleanup(path)
