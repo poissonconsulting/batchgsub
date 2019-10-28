@@ -1,4 +1,5 @@
-txt_input = function(..., width = '100%') shiny::textInput(..., width = width)
+txt_input <- function(..., width = '100%') shiny::textInput(..., width = width)
+button <- function(..., class = "btn-primary") actionButton(..., class = class)
 
 app_ui <- function() {
   miniUI::miniPage(title = "Batch file text replacement",
@@ -13,6 +14,7 @@ app_ui <- function() {
       txt_input("regexp", "File Extension", value = "[.](R|r)$"),
       checkboxInput("recurse", "Recurse", value = FALSE)
     ),
-    miniUI::gadgetTitleBar(NULL)
+    miniUI::gadgetTitleBar(title = NULL, right = miniUI::miniTitleBarButton("done", "Run", primary = TRUE)
+    )
   )
 }
