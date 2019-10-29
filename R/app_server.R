@@ -1,12 +1,14 @@
 app_server <- function(input, output, session) {
   
+  global_path <- getShinyOption("path")
+  
   clear_inputs <- function() {
     updateTextInput(session, "pattern", value = "")
     updateTextInput(session, "replacement", value = "")
     updateCheckboxInput(session, "recurse", value = FALSE)
     updateTextInput(session, "regexp", value = "[.](R|r)$")
     global$ready <- FALSE
-    global$datapath <- NULL
+    global$datapath <- global_path
   }
   
   show_success <- function(x) {
@@ -47,7 +49,7 @@ app_server <- function(input, output, session) {
 
   shinyFiles::shinyDirChoose(input, "dir", roots = c(home = "~"))
 
-  global <- reactiveValues(datapath = NULL,
+  global <- reactiveValues(datapath = global_path,
                            ready = FALSE)
 
   output$path <- renderText({

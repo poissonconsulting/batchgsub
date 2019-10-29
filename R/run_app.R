@@ -1,7 +1,8 @@
 #' Run the batch_gsub Shiny Application
 #'
 #' @export
-run_app <- function() {
+run_app <- function(path = getwd()) {
+  shinyOptions(path = path)
   shiny::runGadget(app = shiny::shinyAppDir(system.file("app", package = "batchgsub")),
     viewer = shiny::dialogViewer("Batch file text replacement", height = 400))
 }
