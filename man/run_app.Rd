@@ -4,7 +4,10 @@
 \alias{run_app}
 \title{Run the batch_gsub Shiny Application}
 \usage{
-run_app()
+run_app(path = getwd())
+}
+\arguments{
+\item{path}{A character string of the default path.}
 }
 \description{
 Run the batch_gsub Shiny Application
