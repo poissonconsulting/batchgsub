@@ -11,13 +11,6 @@ app_server <- function(input, output, session) {
     global$datapath <- global_path
   }
   
-  show_success <- function(x) {
-    x <- data.frame(x)
-    x$File <- row.names(x)
-    x$Success <- ifelse(x$x, "yes", "no")
-    x[, c("File", "Success")]
-  }
-  
   cleanup <- function(path, recurse){
     batchr::batch_cleanup(path = path, force = TRUE, recursive = recurse)
   }
@@ -86,7 +79,7 @@ app_server <- function(input, output, session) {
                                           replacement = input$replacement, path = path,
                                           regexp = input$regexp, recurse = input$recurse), silent = TRUE)
 
-      if(inherits(remaining, "try-error")){
+      if(is_try_error(remaining)){
         global$ready <- FALSE
         return(showModal(modal_none()))
       }
@@ -114,7 +107,7 @@ app_server <- function(input, output, session) {
     showModal(modalDialog(h5(paste(sum(success), "files successfully modified")),
                           tableOutput("success"),
                           footer = modalButton("Got it")))
-    output$success <- renderTable(show_success(success))
+    output$success <- renderTable(table_success(success))
     clear_inputs()
   })
   
