@@ -78,7 +78,7 @@ By default it replaces text in all .R and .r files in the working directory." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">batchgsub</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9001</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9002</span>
       </span>
     </div>
 
@@ -129,9 +129,9 @@ By default it replaces text in all .R and .r files in the working directory.</p>
     </div>
 
     <pre class="usage"><span class='fu'>batch_gsub</span>(<span class='no'>pattern</span>, <span class='no'>replacement</span>, <span class='no'>path</span>, <span class='kw'>regexp</span> <span class='kw'>=</span> <span class='st'>"[.](R|r)$"</span>,
-  <span class='kw'>recurse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>progress</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>report</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-  <span class='kw'>options</span> <span class='kw'>=</span> <span class='kw pkg'>furrr</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/furrr/man/future_options.html'>future_options</a></span>(), <span class='kw'>ask</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"batchr.ask"</span>,
-  <span class='fl'>TRUE</span>))</pre>
+  <span class='kw'>ignore.case</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>fixed</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>recurse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>progress</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>report</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>options</span> <span class='kw'>=</span> <span class='kw pkg'>furrr</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/furrr/man/future_options.html'>future_options</a></span>(),
+  <span class='kw'>ask</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"batchr.ask"</span>, <span class='fl'>TRUE</span>))</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -152,6 +152,15 @@ By default it replaces text in all .R and .r files in the working directory.</p>
       <th>regexp</th>
       <td><p>A string of a regular expression. Only non-hidden file names
 which match the regular expression will be batch processed.</p></td>
+    </tr>
+    <tr>
+      <th>ignore.case</th>
+      <td><p>A flag specifying whether to ignore the case.</p></td>
+    </tr>
+    <tr>
+      <th>fixed</th>
+      <td><p>A flag specifying whether to match <code>pattern</code> as is
+(as opposed to as a regular expression).</p></td>
     </tr>
     <tr>
       <th>recurse</th>
@@ -199,7 +208,7 @@ successfully processed.</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Sebastian Dalgarno.</p>
+  <p>Developed by Sebastian Dalgarno, Joe Thorley, Poisson Consulting.</p>
 </div>
 
 <div class="pkgdown">
