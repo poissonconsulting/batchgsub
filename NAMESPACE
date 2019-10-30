@@ -2,5 +2,4 @@
 
 export(run_app)
 import(chk)
-import(lifecycle)
 import(shiny, except = p)

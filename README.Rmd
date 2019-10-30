@@ -54,10 +54,6 @@ install.packages("batchgsub")
 batchgsub::run_app()
 ```
 
-## Information
-
-For more information see the [Get Started](https://poissonconsulting.github.io/batchgsub/articles/batchgsub.html) vignette.
-
 ## Contribution
 
 Please report any [issues](https://github.com/poissonconsulting/batchgsub/issues).
