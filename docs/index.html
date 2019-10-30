@@ -18,7 +18,6 @@
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><meta property="og:title" content="Batch File Text Replacement">
 <meta property="og:description" content="A Shiny app and Rstudio addin to batch process text replacement in content of files.">
-<meta property="og:image" content="/logo.png">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -38,7 +37,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">batchgsub</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9001</span>
       </span>
     </div>
 
@@ -49,9 +48,6 @@
     <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
-</li>
-<li>
-  <a href="articles/batchgsub.html">Get started</a>
 </li>
 <li>
   <a href="reference/index.html">Reference</a>
@@ -81,32 +77,58 @@
   <div class="contents col-md-9">
 <div id="batchgsub" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#batchgsub" class="anchor"></a>batchgsub <img src="reference/figures/logo.png" align="right">
-</h1></div>
+<a href="#batchgsub" class="anchor"></a>batchgsub</h1></div>
 <!-- badges: start -->
 
-<p>batchgsub provides a Shiny app and Rstudio addin for batch replacement of text content in files.</p>
+<p><code>batchgsub</code> provides a function, Shiny app and RStudio addin for batch replacement of text content in files.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <!-- To install the latest release from [CRAN](https://cran.r-project.org) -->
 <p>To install the developmental version from <a href="https://github.com/poissonconsulting/batchgsub">GitHub</a></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="co"># install.packages("remotes")</span></a>
-<a class="sourceLine" id="cb1-2" title="2">remotes<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/remotes/man/install_github.html">install_github</a></span>(<span class="st">"poissonconsulting/batchgsub"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># install.packages("remotes")</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>remotes<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/remotes/man/install_github.html">install_github</a></span>(<span class="st">"poissonconsulting/batchgsub"</span>)</span></code></pre></div>
 <p>To install the latest developmental release from the Poisson drat <a href="https://github.com/poissonconsulting/drat">repository</a></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="co"># install.packages("drat")</span></a>
-<a class="sourceLine" id="cb2-2" title="2">drat<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/drat/man/addRepo.html">addRepo</a></span>(<span class="st">"poissonconsulting"</span>)</a>
-<a class="sourceLine" id="cb2-3" title="3"><span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"batchgsub"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># install.packages("drat")</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>drat<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/drat/man/addRepo.html">addRepo</a></span>(<span class="st">"poissonconsulting"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"batchgsub"</span>)</span></code></pre></div>
 </div>
 <div id="demonstration" class="section level2">
 <h2 class="hasAnchor">
 <a href="#demonstration" class="anchor"></a>Demonstration</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">batchgsub<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/batchgsub/man/run_app.html">run_app</a></span>()</a></code></pre></div>
+<div id="function" class="section level3">
+<h3 class="hasAnchor">
+<a href="#function" class="anchor"></a>Function</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(batchgsub)</span>
+<span id="cb3-2"><a href="#cb3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3"></a>path &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/tempfile.html">tempdir</a></span>()</span>
+<span id="cb3-4"><a href="#cb3-4"></a>file &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/file.path.html">file.path</a></span>(path, <span class="st">"file1.txt"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="kw"><a href="https://rdrr.io/r/base/writeLines.html">writeLines</a></span>(<span class="st">"The quick brown fox jumps over the lazy dog"</span>, <span class="dt">con =</span> file)</span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="kw"><a href="https://rdrr.io/r/base/readLines.html">readLines</a></span>(file)</span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="co">#&gt; [1] "The quick brown fox jumps over the lazy dog"</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="kw"><a href="reference/batch_gsub.html">batch_gsub</a></span>(<span class="st">"o"</span>, <span class="st">"ooo"</span>, <span class="dt">path =</span> path, <span class="dt">regexp =</span> <span class="st">"[.]txt$"</span>, <span class="dt">ask =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="co">#&gt; ✔ file1.txt [00:00:00.001]</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="co">#&gt; </span></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="co">#&gt; Success: 1</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="co">#&gt; Failure: 0</span></span>
+<span id="cb3-13"><a href="#cb3-13"></a><span class="co">#&gt; Remaining: 0</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a><span class="co">#&gt; </span></span>
+<span id="cb3-15"><a href="#cb3-15"></a><span class="kw"><a href="https://rdrr.io/r/base/readLines.html">readLines</a></span>(file)</span>
+<span id="cb3-16"><a href="#cb3-16"></a><span class="co">#&gt; [1] "The quick brooown fooox jumps ooover the lazy dooog"</span></span></code></pre></div>
 </div>
-<div id="information" class="section level2">
-<h2 class="hasAnchor">
-<a href="#information" class="anchor"></a>Information</h2>
-<p>For more information see the <a href="https://poissonconsulting.github.io/batchgsub/articles/batchgsub.html">Get Started</a> vignette.</p>
+<div id="shiny-app" class="section level3">
+<h3 class="hasAnchor">
+<a href="#shiny-app" class="anchor"></a>Shiny App</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>batchgsub<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/batchgsub/man/run_app.html">run_app</a></span>()</span></code></pre></div>
+<p><img src="reference/figures/shiny-app.png" alt="Shiny app"></p>
+</div>
+<div id="rstudio-addin" class="section level3">
+<h3 class="hasAnchor">
+<a href="#rstudio-addin" class="anchor"></a>RStudio addin</h3>
+<p>The RStudio addin opens the Shiny app from the <a href="https://rstudio.github.io/rstudioaddins/">Addins menu</a>.</p>
+<p>The RStudio addin allows the user to set a keyboard shortcut to run the Shiny app.</p>
+<p><img src="reference/figures/rstudio-addin.png" alt="RStudio addin"></p>
+</div>
 </div>
 <div id="contribution" class="section level2">
 <h2 class="hasAnchor">
@@ -155,7 +177,6 @@
 <li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
 <li><a href="https://travis-ci.com/poissonconsulting/batchgsub"><img src="https://travis-ci.com/poissonconsulting/batchgsub.svg?branch=master" alt="Travis build status"></a></li>
 <li><a href="https://ci.appveyor.com/project/poissonconsulting/batchgsub"><img src="https://ci.appveyor.com/api/projects/status/github/poissonconsulting/batchgsub?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
-<li><a href="https://codecov.io/gh/poissonconsulting/batchgsub?branch=master"><img src="https://codecov.io/gh/poissonconsulting/batchgsub/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 <li><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a></li>
 </ul>
 </div>
