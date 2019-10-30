@@ -14,8 +14,8 @@ app_ui <- function() {
       txt_input("regexp", "File Extension", value = "[.](R|r)$"),
       checkboxInput("recurse", "Recurse", value = FALSE)
     ),
-    miniUI::gadgetTitleBar(title = NULL, 
-                           right = miniUI::miniTitleBarButton("done", "Run", primary = TRUE)
+    miniUI::gadgetTitleBar(title = NULL,
+      right = miniUI::miniTitleBarButton("done", "Run", primary = TRUE)
     )
   )
 }

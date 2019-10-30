@@ -30,4 +30,3 @@ test_that("tibble", {
     structure(list(x = "1"), class = c("tbl_df", "tbl", "data.frame"), row.names = c(NA, -1L))
   )
 })
-
