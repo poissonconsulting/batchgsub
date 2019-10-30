@@ -1,4 +1,4 @@
-context("gsub")
+context("batch-gsub")
 
 test_that("batch_gsub", {
   teardown(unlink(file.path(tempdir(), "batchr")))
