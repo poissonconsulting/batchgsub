@@ -36,4 +36,27 @@ test_that("batch_gsub", {
     pattern = "zz", replacement = "z", path = path,
     ask = FALSE
   ))
+  expect_true(batch_gsub(
+    pattern = "Z", replacement = "a", path = path,
+    ask = FALSE
+  ))
+  expect_identical(readLines(file), c("some z", "and some more z z z z"))
+  
+  expect_true(batch_gsub(
+    pattern = "Z", replacement = "a", path = path, ignore.case = TRUE,
+    ask = FALSE
+  ))
+  expect_identical(readLines(file), c("some a", "and some more a a a a"))
+  
+  expect_true(batch_gsub(
+    pattern = ".", replacement = "b", path = path, fixed = TRUE,
+    ask = FALSE
+  ))
+  expect_identical(readLines(file), c("some a", "and some more a a a a"))
+  
+  expect_true(batch_gsub(
+    pattern = ".", replacement = "b", path = path,
+    ask = FALSE
+  ))
+  expect_identical(readLines(file), c("bbbbbb", "bbbbbbbbbbbbbbbbbbbbb"))
 })
