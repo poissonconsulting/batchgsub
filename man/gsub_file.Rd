@@ -4,7 +4,8 @@
 \alias{gsub_file}
 \title{File Text Replacement}
 \usage{
-gsub_file(file, pattern, replacement)
+gsub_file(file, pattern, replacement, ignore.case = FALSE,
+  fixed = FALSE)
 }
 \arguments{
 \item{file}{A string of the name of the file to modify.}
@@ -12,6 +13,11 @@ gsub_file(file, pattern, replacement)
 \item{pattern}{A string of the regular expression to match.}
 
 \item{replacement}{A string of the replacement text.}
+
+\item{ignore.case}{A flag specifying whether to ignore the case.}
+
+\item{fixed}{A flag specifying whether to match \code{pattern} as is
+(as opposed to as a regular expression).}
 }
 \value{
 TRUE

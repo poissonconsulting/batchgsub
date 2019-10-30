@@ -5,9 +5,9 @@
 \title{Batch File Text Replacement}
 \usage{
 batch_gsub(pattern, replacement, path, regexp = "[.](R|r)$",
-  recurse = FALSE, progress = FALSE, report = TRUE,
-  options = furrr::future_options(), ask = getOption("batchr.ask",
-  TRUE))
+  ignore.case = FALSE, fixed = FALSE, recurse = FALSE,
+  progress = FALSE, report = TRUE, options = furrr::future_options(),
+  ask = getOption("batchr.ask", TRUE))
 }
 \arguments{
 \item{pattern}{A string of the regular expression to match.}
@@ -18,6 +18,11 @@ batch_gsub(pattern, replacement, path, regexp = "[.](R|r)$",
 
 \item{regexp}{A string of a regular expression. Only non-hidden file names
 which match the regular expression will be batch processed.}
+
+\item{ignore.case}{A flag specifying whether to ignore the case.}
+
+\item{fixed}{A flag specifying whether to match \code{pattern} as is
+(as opposed to as a regular expression).}
 
 \item{recurse}{A flag specifying whether to recurse into path's subdirectories.}
 

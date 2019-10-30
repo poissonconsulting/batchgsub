@@ -15,12 +15,15 @@
 #' successfully processed.
 #' @export
 batch_gsub <- function(pattern, replacement,
-                       path, regexp = "[.](R|r)$", recurse = FALSE,
+                       path, regexp = "[.](R|r)$",
+                       ignore.case = FALSE, fixed = FALSE,
+                       recurse = FALSE,
                        progress = FALSE, report = TRUE,
                        options = furrr::future_options(),
                        ask = getOption("batchr.ask", TRUE)) {
   batchr::batch_process(gsub_file,
-    pattern = pattern, replacement = replacement, report = report,
+    pattern = pattern, replacement = replacement, 
+    ignore.case = ignore.case, fixed = fixed, report = report,
     path = path, regexp = regexp, recurse = recurse,
     progress = progress, options = options, ask = ask
   )
