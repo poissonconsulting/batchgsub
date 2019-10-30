@@ -6,8 +6,6 @@
 \alias{batchgsub-package}
 \title{batchgsub: Batch File Text Replacement}
 \description{
-\if{html}{\figure{logo.png}{options: align='right'}}
-
 A Shiny app and Rstudio addin to batch process text replacement in content of files.
 }
 \seealso{

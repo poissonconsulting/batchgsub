@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# batchgsub <img src="man/figures/logo.png" align="right" />
+# batchgsub
 
 <!-- badges: start -->
 
@@ -11,18 +11,14 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 status](https://travis-ci.com/poissonconsulting/batchgsub.svg?branch=master)](https://travis-ci.com/poissonconsulting/batchgsub)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/batchgsub?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/batchgsub)
-[![Codecov test
-coverage](https://codecov.io/gh/poissonconsulting/batchgsub/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/batchgsub?branch=master)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-<!-- [![Tinyverse status](https://tinyverse.netlify.com/badge/batchgsub)](https://CRAN.R-project.org/package=batchgsub) -->
 <!-- [![CRAN status](https://www.r-pkg.org/badges/version/batchgsub)](https://cran.r-project.org/package=batchgsub) -->
 <!-- ![CRAN downloads](https://cranlogs.r-pkg.org/badges/batchgsub) -->
 <!-- badges: end -->
 
-batchgsub provides a Shiny app and Rstudio addin for batch replacement
-of text content in
-files.
+`batchgsub` provides a function, Shiny app and RStudio addin for batch
+replacement of text content in files.
 
 ## Installation
 
@@ -47,15 +43,44 @@ install.packages("batchgsub")
 
 ## Demonstration
 
+### Function
+
+``` r
+library(batchgsub)
+
+path <- tempdir()
+file <- file.path(path, "file1.txt")
+writeLines("The quick brown fox jumps over the lazy dog", con = file)
+readLines(file)
+#> [1] "The quick brown fox jumps over the lazy dog"
+batch_gsub("o", "ooo", path = path, regexp = "[.]txt$", ask = FALSE)
+#> ✔ file1.txt [00:00:00.001]
+#> 
+#> Success: 1
+#> Failure: 0
+#> Remaining: 0
+#> 
+readLines(file)
+#> [1] "The quick brooown fooox jumps ooover the lazy dooog"
+```
+
+### Shiny App
+
 ``` r
 batchgsub::run_app()
 ```
 
-## Information
+![Shiny app](man/figures/shiny-app.png)
 
-For more information see the [Get
-Started](https://poissonconsulting.github.io/batchgsub/articles/batchgsub.html)
-vignette.
+### RStudio addin
+
+The RStudio addin opens the Shiny app from the [Addins
+menu](https://rstudio.github.io/rstudioaddins/).
+
+The RStudio addin allows the user to set a keyboard shortcut to run the
+Shiny app.
+
+![RStudio addin](man/figures/rstudio-addin.png)
 
 ## Contribution
 
