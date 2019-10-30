@@ -75,7 +75,7 @@ app_server <- function(input, output, session) {
       return()
     
     path <- global$datapath
-    remaining <- try(batchr::batch_config(batchr::gsub_file, pattern = input$pattern,
+    remaining <- try(batchr::batch_config(gsub_file, pattern = input$pattern,
                                           replacement = input$replacement, path = path,
                                           regexp = input$regexp, recurse = input$recurse), silent = TRUE)
 

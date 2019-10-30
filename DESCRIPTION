@@ -9,7 +9,7 @@ Description: A Shiny app and Rstudio addin to batch process text replacement in 
 License: MIT + file LICENSE
 Imports:
     chk,
-    batchr,
+    batchr (>= 0.0.0.9040),
     shiny,
     shinyFiles,
     miniUI
