@@ -4,8 +4,7 @@
 \alias{gsub_file}
 \title{File Text Replacement}
 \usage{
-gsub_file(file, pattern, replacement, ignore.case = FALSE,
-  fixed = FALSE)
+gsub_file(file, pattern, replacement, ignore.case = FALSE, fixed = FALSE)
 }
 \arguments{
 \item{file}{A string of the name of the file to modify.}

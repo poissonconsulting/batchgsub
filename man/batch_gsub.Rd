@@ -4,10 +4,19 @@
 \alias{batch_gsub}
 \title{Batch File Text Replacement}
 \usage{
-batch_gsub(pattern, replacement, path, regexp = "[.](R|r)$",
-  ignore.case = FALSE, fixed = FALSE, recurse = FALSE,
-  progress = FALSE, report = TRUE, options = furrr::future_options(),
-  ask = getOption("batchr.ask", TRUE))
+batch_gsub(
+  pattern,
+  replacement,
+  path,
+  regexp = "[.](R|r)$",
+  ignore.case = FALSE,
+  fixed = FALSE,
+  recurse = FALSE,
+  progress = FALSE,
+  report = TRUE,
+  options = furrr::future_options(),
+  ask = getOption("batchr.ask", TRUE)
+)
 }
 \arguments{
 \item{pattern}{A string of the regular expression to match.}
