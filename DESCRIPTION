@@ -10,7 +10,7 @@ Description: A Shiny app and Rstudio addin to batch process text replacement in 
 License: MIT + file LICENSE
 Imports:
     chk,
-    batchr (>= 0.0.0.9040),
+    batchr,
     shiny,
     shinyFiles,
     miniUI
@@ -20,12 +20,11 @@ Suggests:
     knitr,
     rmarkdown
 Remotes: 
-    poissonconsulting/chk,
     poissonconsulting/batchr
 URL: https://github.com/poissonconsulting/batchgsub
 BugReports: https://github.com/poissonconsulting/batchgsub/issues
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Language: en-US
 Roxygen: list(markdown = TRUE)
