@@ -6,11 +6,7 @@
 <!-- badges: start -->
 
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Travis build
-status](https://travis-ci.com/poissonconsulting/batchgsub.svg?branch=master)](https://travis-ci.com/poissonconsulting/batchgsub)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/batchgsub?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/batchgsub)
+deprecated](https://img.shields.io/badge/lifecycle-deprecated-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#deprecated)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 <!-- [![CRAN status](https://www.r-pkg.org/badges/version/batchgsub)](https://cran.r-project.org/package=batchgsub) -->
@@ -32,15 +28,6 @@ To install the developmental version from
 remotes::install_github("poissonconsulting/batchgsub")
 ```
 
-To install the latest developmental release from the Poisson drat
-[repository](https://github.com/poissonconsulting/drat)
-
-``` r
-# install.packages("drat")
-drat::addRepo("poissonconsulting")
-install.packages("batchgsub")
-```
-
 ## Demonstration
 
 ### Function
@@ -54,8 +41,11 @@ writeLines("The quick brown fox jumps over the lazy dog", con = file)
 readLines(file)
 #> [1] "The quick brown fox jumps over the lazy dog"
 batch_gsub("o", "ooo", path = path, regexp = "[.]txt$", ask = FALSE)
-#> ✔ file1.txt [00:00:00.001]
-#> 
+#> Warning: `future_options()` is deprecated as of furrr 0.2.0.
+#> Please use `furrr_options()` instead.
+#> This warning is displayed once every 8 hours.
+#> Call `lifecycle::last_warnings()` to see where this warning was generated.
+#> ✓ file1.txt [00:00:00.000]
 #> Success: 1
 #> Failure: 0
 #> Remaining: 0
@@ -90,6 +80,9 @@ Please report any
 [Pull requests](https://github.com/poissonconsulting/batchgsub/pulls)
 are always welcome.
 
-Please note that this project is released with a [Contributor Code of
-Conduct](https://github.com/poissonconsulting/batchgsub/blob/master/CODE_OF_CONDUCT.md).
-By contributing, you agree to abide by its terms.
+## Code of Conduct
+
+Please note that the batchgsub project is released with a [Contributor
+Code of
+Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
